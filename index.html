@@ -1,14 +1,134 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mecânica Souza</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 1em 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5em;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: url('imagens/oficina1.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 5em 1em;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ffcc00;
+      color: #000;
+      padding: 0.75em 1.5em;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 1em;
+      font-weight: bold;
+    }
+
+    .gray {
+      background: #f7f7f7;
+    }
+
+    section {
+      padding: 3em 1em;
+    }
+
+    h2 {
+      margin-bottom: 1em;
+      color: #222;
+    }
+
+    .equipe img,
+    .galeria img {
+      max-width: 30%;
+      margin: 0.5em;
+      border-radius: 10px;
+    }
+
+    .servicos-lista {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      list-style: none;
+      padding: 0;
+    }
+
+    .servicos-lista li {
+      background: #eee;
+      padding: 1em;
+      border-radius: 8px;
+      flex: 1 1 200px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      max-width: 600px;
+    }
+
+    form input,
+    form textarea {
+      padding: 0.75em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background: #ffcc00;
+      color: #000;
+      padding: 0.75em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+      margin-top: 2em;
+    }
+  </style>
 </head>
 <body>
+
   <header>
     <div class="container">
       <h1>Mecânica Souza</h1>
@@ -39,9 +159,9 @@
       <p>Há mais de 10 anos no mercado, a Mecânica Souza oferece serviços automotivos com qualidade, confiança e preço justo. Nossa missão é garantir sua segurança nas estradas.</p>
       <h3>Nossa Equipe</h3>
       <div class="equipe">
-        <img src="imagens/equipe1.jpg" alt="Mecânico 1">
-        <img src="imagens/equipe2.jpg" alt="Mecânico 2">
-        <img src="imagens/equipe3.jpg" alt="Mecânico 3">
+        <img src="imagens/equipe1.jpg" alt="Mecânico 1" />
+        <img src="imagens/equipe2.jpg" alt="Mecânico 2" />
+        <img src="imagens/equipe3.jpg" alt="Mecânico 3" />
       </div>
     </div>
   </section>
@@ -65,9 +185,9 @@
     <div class="container">
       <h2>Galeria</h2>
       <div class="galeria">
-        <img src="imagens/oficina1.jpg" alt="Foto da oficina">
-        <img src="imagens/oficina2.jpg" alt="Foto de serviço">
-        <img src="imagens/oficina3.jpg" alt="Foto da equipe">
+        <img src="imagens/oficina1.jpg" alt="Foto da oficina" />
+        <img src="imagens/oficina2.jpg" alt="Foto de serviço" />
+        <img src="imagens/oficina3.jpg" alt="Foto da equipe" />
       </div>
     </div>
   </section>
@@ -75,8 +195,8 @@
   <section id="depoimentos" class="gray">
     <div class="container">
       <h2>Depoimentos</h2>
-      <blockquote>"Serviço excelente, meu carro saiu novo!" - João Carlos</blockquote>
-      <blockquote>"Atendimento rápido e honesto. Recomendo demais!" - Maria Helena</blockquote>
+      <blockquote>“Serviço excelente, meu carro saiu novo!” - João Carlos</blockquote>
+      <blockquote>“Atendimento rápido e honesto. Recomendo demais!” - Maria Helena</blockquote>
     </div>
   </section>
 
@@ -88,27 +208,19 @@
       <p>Endereço: Rua da Oficina, 123 - Bairro Central - Sua Cidade/UF</p>
       <p>Horário: Seg a Sex - 8h às 18h | Sábado - 8h às 12h</p>
       <form>
-
-        <input type="text" placeholder="Seu nome" required>
-
-        <input type="email" placeholder="Seu email" required>
-
+        <input type="text" placeholder="Seu nome" required />
+        <input type="email" placeholder="Seu email" required />
         <textarea placeholder="Sua mensagem" required></textarea>
-
         <button type="submit">Enviar</button>
-
       </form>
     </div>
   </section>
 
   <footer>
-
     <div class="container">
-
       <p>&copy; 2025 Mecânica Souza. Todos os direitos reservados.</p>
-
     </div>
-
   </footer>
+
 </body>
 </html>

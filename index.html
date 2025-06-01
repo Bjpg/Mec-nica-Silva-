@@ -1,127 +1,226 @@
-<!DOCTYPE html><html lang="pt-br"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mecânica Souza</title>
   <style>
     body {
+      font-family: 'Roboto', sans-serif;
       margin: 0;
-      font-family: Arial, sans-serif;
-    }header {
-  background-color: #b30000; /* vermelho */
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
+      padding: 0;
+      color: #333;
+    }
 
-nav {
-  background-color: #e60000; /* vermelho */
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px;
-}
+    header {
+      background: #222;
+      color: #fff;
+      padding: 1em 0;
+    }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
-}
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.5em;
+      flex-wrap: wrap;
+    }
 
-section {
-  margin-bottom: 40px;
-}
+    nav a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.equipe img,
-.galeria img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  margin: 10px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-}
+    .hero {
+      background: url('imagens/oficina1.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 5em 1em;
+    }
 
-footer {
-  background-color: #b30000;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
+    .btn {
+      display: inline-block;
+      background: #ffcc00;
+      color: #000;
+      padding: 0.75em 1.5em;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 1em;
+      font-weight: bold;
+    }
 
+    .gray {
+      background: #f7f7f7;
+    }
+
+    section {
+      padding: 3em 1em;
+    }
+
+    h2 {
+      margin-bottom: 1em;
+      color: #222;
+    }
+
+    .equipe img,
+    .galeria img {
+      max-width: 30%;
+      margin: 0.5em;
+      border-radius: 10px;
+    }
+
+    .servicos-lista {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      list-style: none;
+      padding: 0;
+    }
+
+    .servicos-lista li {
+      background: #eee;
+      padding: 1em;
+      border-radius: 8px;
+      flex: 1 1 200px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      max-width: 600px;
+    }
+
+    form input,
+    form textarea {
+      padding: 0.75em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background: #ffcc00;
+      color: #000;
+      padding: 0.75em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+      margin-top: 2em;
+    }
   </style>
-</head><body>
+</head>
+<body>
+
   <header>
-    <h1>Mecânica Souza</h1>
-    <p>Seu carro em boas mãos!</p>
-  </header>  <nav>
-    <a href="#servicos">Serviços</a>
-    <a href="#sobre">Quem Somos</a>
-    <a href="#galeria">Galeria</a>
-    <a href="#contato">Contato</a>
-  </nav>  <section id="servicos">
     <div class="container">
-      <h2>Serviços</h2>
-      <ul>
-        <li>Troca de óleo</li>
-        <li>Alinhamento e balanceamento</li>
-        <li>Revisão completa</li>
-        <li>Elétrica e motor</li>
-      </ul>
+      <h1>Mecânica Souza</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#sobre">Quem Somos</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
     </div>
-  </section>  <section id="sobre">
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <h2>Confiança sobre quatro rodas</h2>
+      <p>Atendimento rápido, peças originais e garantia de serviço.</p>
+      <a href="https://wa.me/seunumerowhats" class="btn">Agende seu horário</a>
+    </div>
+  </section>
+
+  <section id="sobre">
     <div class="container">
       <h2>Quem Somos</h2>
-      <p>Há mais de 10 anos cuidando do seu carro com qualidade e confiança. Atendemos toda região de Mococa-SP com atendimento rápido, eficiente e justo!</p><h3>Nossa Equipe</h3>
-  <div class="equipe" id="equipeFotos">
-    <img src="" alt="Equipe 1" id="equipeImg1">
-    <input type="file" accept="image/*" onchange="loadImage(this, 'equipeImg1')">
-    <br>
-    <img src="" alt="Equipe 2" id="equipeImg2">
-    <input type="file" accept="image/*" onchange="loadImage(this, 'equipeImg2')">
-    <br>
-    <img src="" alt="Equipe 3" id="equipeImg3">
-    <input type="file" accept="image/*" onchange="loadImage(this, 'equipeImg3')">
-  </div>
-</div>
-
-  </section>  <section id="galeria">
-    <div class="container">
-      <h2>Galeria</h2>
-      <div class="galeria" id="galeriaFotos">
-        <img src="" alt="Foto 1" id="galeriaImg1">
-        <input type="file" accept="image/*" onchange="loadImage(this, 'galeriaImg1')">
-        <br>
-        <img src="" alt="Foto 2" id="galeriaImg2">
-        <input type="file" accept="image/*" onchange="loadImage(this, 'galeriaImg2')">
-        <br>
-        <img src="" alt="Foto 3" id="galeriaImg3">
-        <input type="file" accept="image/*" onchange="loadImage(this, 'galeriaImg3')">
+      <p>Há mais de 10 anos no mercado, a Mecânica Souza oferece serviços automotivos com qualidade, confiança e preço justo. Nossa missão é garantir sua segurança nas estradas.</p>
+      <h3>Nossa Equipe</h3>
+      <div class="equipe">
+        <img src="imagens/equipe1.jpg" alt="Mecânico 1" />
+        <img src="imagens/equipe2.jpg" alt="Mecânico 2" />
+        <img src="imagens/equipe3.jpg" alt="Mecânico 3" />
       </div>
     </div>
-  </section>  <section id="contato">
+  </section>
+
+  <section id="servicos" class="gray">
+    <div class="container">
+      <h2>Serviços</h2>
+      <ul class="servicos-lista">
+        <li>Troca de óleo</li>
+        <li>Revisão completa</li>
+        <li>Freios e suspensão</li>
+        <li>Injeção eletrônica</li>
+        <li>Ar-condicionado automotivo</li>
+        <li>Diagnóstico computadorizado</li>
+        <li>Mecânica geral</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <div class="container">
+      <h2>Galeria</h2>
+      <div class="galeria">
+        <img src="imagens/oficina1.jpg" alt="Foto da oficina" />
+        <img src="imagens/oficina2.jpg" alt="Foto de serviço" />
+        <img src="imagens/oficina3.jpg" alt="Foto da equipe" />
+      </div>
+    </div>
+  </section>
+
+  <section id="depoimentos" class="gray">
+    <div class="container">
+      <h2>Depoimentos</h2>
+      <blockquote>“Serviço excelente, meu carro saiu novo!” - João Carlos</blockquote>
+      <blockquote>“Atendimento rápido e honesto. Recomendo demais!” - Maria Helena</blockquote>
+    </div>
+  </section>
+
+  <section id="contato">
     <div class="container">
       <h2>Contato</h2>
-      <p>Telefone: (19) 99657-3542</p>
-      <p>Endereço: Av. Brasil, 234 - Centro, Mococa - SP</p>
-      <p>Email: atendimento@mecanicasouza.com.br</p>
+      <p>Telefone: (XX) XXXX-XXXX</p>
+      <p>WhatsApp: <a href="https://wa.me/seunumerowhats">Clique aqui</a></p>
+      <p>Endereço: Rua da Oficina, 123 - Bairro Central - Sua Cidade/UF</p>
+      <p>Horário: Seg a Sex - 8h às 18h | Sábado - 8h às 12h</p>
+      <form>
+        <input type="text" placeholder="Seu nome" required />
+        <input type="email" placeholder="Seu email" required />
+        <textarea placeholder="Sua mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
     </div>
-  </section>  <footer>
-    <p>&copy; 2025 Mecânica Souza - Todos os direitos reservados</p>
-  </footer>  <script>
-    function loadImage(input, imgId) {
-      const file = input.files[0];
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        document.getElementById(imgId).src = e.target.result;
-      };
-      if (file) {
-        reader.readAsDataURL(file);
-      }
-    }
-  </script></body></html>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Mecânica Souza. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+  </html>

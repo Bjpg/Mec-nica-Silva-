@@ -21,8 +21,7 @@ jobs:
       - name: Prepare static site
         run: |
           mkdir -p _site
-          cp -R . _site/
-          rm -rf _site/.git _site/.github
+          find . -mindepth 1 -maxdepth 1 ! -name _site ! -name .git ! -name .github -exec cp -R {} _site/ \;
           if [ ! -f _site/index.html ] && [ -f _site/index.htm ]; then cp _site/index.htm _site/index.html; fi
           test -f _site/index.html
       - uses: actions/configure-pages@v5
